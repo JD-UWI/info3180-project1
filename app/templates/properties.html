@@ -1,0 +1,18 @@
+
+{% extends 'base.html' %}
+
+{% block main %}
+    <h1 class="page-header">Properties</h1>
+    <div class="properties">
+    {% for data in properties %}
+        <div class="card">
+            <img class="library" src="{{ url_for('get_image', filename = data.photo) }}" alt="{ image }">
+            <h2>{{ data.title }}</h2>
+            <p class="locations"> {{ data.location }}</p>
+            <p class="priceline">${{ data.price }}</p>
+            <br>
+            <a href="{{ url_for('propertyID', propertyid=data.id ) }}">View property</a>
+        </div>
+    {% endfor %}
+    </div>
+{% endblock %}

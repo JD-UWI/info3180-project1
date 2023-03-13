@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+
+{% block main %}
+  <h1 class="page-header">Add New Property</h1>
+
+  {% include 'flash_messages.html' %}
+
+
+  <form action="{{ url_for('newproperties') }}" method="POST"  enctype="multipart/form-data">
+
+    {{ form.csrf_token }}
+    <div class="row">
+      <div class="form-group mb-3">
+        <h5>{{ form.title.label(class="form-label") }}</h5>
+        {{ form.title(class="form-control") }}
+      </div>
+    </div>
+    <div class="row">
+      <div class="form-group mb-3">
+        <h5>{{ form.description.label(class="form-label") }}</h5>
+        {{ form.description(class="form-control") }}
+      </div>
+    </div>
+    <div class="row">
+      <div class="form-group mb-3">
+        <h5>{{ form.roomnum.label(class="form-label") }}</h5>
+        {{ form.roomnum(class="form-control") }}
+      </div>
+    </div>
+    <div class="row">
+      <div class="form-group mb-3">
+        <h5>{{ form.bathnum.label(class="form-label") }}</h5>
+        {{ form.bathnum(class="form-control") }}
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="form-group mb-3">
+        <h5>{{ form.location.label(class="form-label") }}</h5>
+        {{ form.location(class="form-control") }}
+      </div>
+    </div>
+    <div class="row">
+      <div class="form-group mb-3">
+        <h5>{{ form.price.label(class="form-label") }}</h5>
+        {{ form.price(class="form-control") }}
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="form-group mb-3">
+        <h5>{{ form.property.label(class="form-label") }}</h5>
+        {{ form.property(class="form-control") }}
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="form-group mb-3">
+        <h5>{{ form.photo.label(class="form-label") }}</h5>
+        {{ form.photo(class="form-control") }}
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="form-group mb-3">
+        <button type="submit" name="submit" class="btn btn-primary">Upload file</button>
+      </div>
+    </div>
+
+  </form>
+{% endblock %}
