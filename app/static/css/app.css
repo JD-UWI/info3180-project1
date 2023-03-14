@@ -45,6 +45,9 @@ body {
 }
 .card img{
     border-radius: 5px 5px 0 0;
+    width: auto;
+    height: 250px;
+
 }
 .properties {
     display: flex;
@@ -94,6 +97,45 @@ body {
     border-radius: 5px;
 }
 
+#pTitle {
+    width: 80%;
+}
+#pDescription .form-control{
+    width: 80%;
+    height: 200px;
+}
+#pRoomNum, #pBathNum, #pLocation, #pPrice, #pType{
+    width: 50%;
+}
+
+#pPhoto{
+    width: 12%;
+
+}
+
+#pPhoto input[type="file"]::file-selector-button{
+    border: none;
+    content: "Browse"
+
+}
+
+/*#pline{
+    background-color: #60a3fd;
+    color: white;
+    border-radius: 50px;
+    margin-left: 5%;
+    margin-right: 60%;
+    margin-bottom: 30px;
+}
+
+#ptype{
+    background-color: #60a3fd;
+    color: white;
+    border-radius: 50px;
+    margin-left: 5%;
+    margin-right: 60%;
+    margin-bottom: 30px;  
+}*/
 .realtor{
     background-color: #14b7a6;
     color: white;

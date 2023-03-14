@@ -8,7 +8,7 @@
         <div class="card">
             <img class="library" src="{{ url_for('get_image', filename = data.photo) }}" alt="{ image }">
             <h2>{{ data.title }}</h2>
-            <p class="locations"> {{ data.location }}</p>
+            <p class="locations"><i class="fas fa-map-marker"></i> {{ data.location }}</p>
             <p class="priceline">${{ data.price }}</p>
             <br>
             <a href="{{ url_for('propertyID', propertyid=data.id ) }}">View property</a>

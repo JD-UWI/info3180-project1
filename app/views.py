@@ -66,7 +66,7 @@ def properties():
 
     return render_template('properties.html', properties=properties)
 
-@app.route('/properties/<propertyid>')
+@app.route('/properties/<int:propertyid>')
 def propertyID(propertyid):
     """Render an individual property by the specific property id."""
     property = Properties.query.get(propertyid)
